@@ -14,7 +14,7 @@ export class BookService {
   }
   
   storeBookDetails(book: any): Observable<object> {
-    return this.http.post('http://localhost:3100/api/book/getAllBooks', book, {
+    return this.http.post('http://localhost:3100/api/book/storeBook', book, {
       responseType: 'json',
     });
   }

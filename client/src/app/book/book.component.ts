@@ -11,13 +11,12 @@ import { BookService } from '../book.service';
 export class BookComponent implements OnInit {
   books: Array<Book> = [];
 
-
   bookRef = new FormGroup({
     name: new FormControl(),
     author: new FormControl(),
     price: new FormControl(),
-    imgSrc: new FormControl()
-  })
+    imgSrc: new FormControl(),
+  });
   constructor(public bookService: BookService) {}
 
   ngOnInit(): void {
@@ -27,6 +26,15 @@ export class BookComponent implements OnInit {
   getAllBooksDetails(): void {
     this.bookService.loadBookDetails().subscribe(
       (result) => (this.books = result),
+      (error) => console.log(error),
+      () => console.log('done')
+    );
+  }
+
+  storeBook() {
+    let book = this.bookRef.value;
+    this.bookService.storeBookDetails(book).subscribe(
+      (result) => console.log(result),
       (error) => console.log(error),
       () => console.log('done')
     );
