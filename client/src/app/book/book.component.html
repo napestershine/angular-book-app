@@ -1,1 +1,24 @@
-<p>book works!</p>
+<div>
+  <h2>All book details</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{ book.name }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.price }}</td>
+      <td>
+        <img
+          src="{{ book.imgSrc }}"
+          alt="{{ book.name }}"
+          height="150"
+          width="150"
+        />
+      </td>
+    </tr>
+  </table>
+</div>
