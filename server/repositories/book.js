@@ -11,13 +11,13 @@ exports.getAll = (cb) => {
     .catch((err) => console.log(err));
 };
 
-exports.create = (cb, book) => {
+exports.storeBook = (book) => {
   const collection = db.getCollection("Book");
-  
+
   collection
     .insertOne(book)
     .then((res) => {
-      cb(res);
+      console.log("stored");
     })
     .catch((err) => console.log(err));
 };

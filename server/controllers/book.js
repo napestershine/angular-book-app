@@ -11,6 +11,6 @@ exports.getAll = (req, res) => {
 exports.storeBook = (req, res) => {
   console.log("Create a new book.");
   let book = req.body;
-  console.log(book);
-  res.send("Done");
+  repo.storeBook(book);
+  res.send(book);
 };
