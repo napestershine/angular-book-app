@@ -15,6 +15,8 @@ mongodb.connect();
 // step 3: configure port
 server.listen(3100);
 server.use(cors("*"));
+//enable post data
+server.use(express.json());
 
 // custom routes
 server.use("/api/book", bookRoutes);

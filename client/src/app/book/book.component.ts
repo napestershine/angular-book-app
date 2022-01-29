@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -9,6 +10,14 @@ import { BookService } from '../book.service';
 })
 export class BookComponent implements OnInit {
   books: Array<Book> = [];
+
+
+  bookRef = new FormGroup({
+    name: new FormControl(),
+    author: new FormControl(),
+    price: new FormControl(),
+    imgSrc: new FormControl()
+  })
   constructor(public bookService: BookService) {}
 
   ngOnInit(): void {

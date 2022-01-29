@@ -10,6 +10,6 @@ export class BookService {
   constructor(public http: HttpClient) {}
 
   loadBookDetails(): Observable<Book[]> {
-    return this.http.get<Book[]>('http://localhost:3100/api/Book');
+    return this.http.get<Book[]>('http://localhost:3100/api/book/getAllBooks');
   }
 }

@@ -8,12 +8,9 @@ exports.getAll = (req, res) => {
   });
 };
 
-exports.create = (req, res) => {
+exports.storeBook = (req, res) => {
   console.log("Create a new book.");
-  console.log(req.body.name);
-  return;
-  // call repository to get data.
-  // repo.create((res) => {
-  //   res.send(res);
-  // });
+  let book = req.body;
+  console.log(book);
+  res.send("Done");
 };

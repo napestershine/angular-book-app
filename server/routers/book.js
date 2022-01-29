@@ -6,7 +6,7 @@ const controller = require("../controllers/book");
 const router = express.Router();
 
 // step 3: configure path
-router.get("/", controller.getAll);
-router.post("/", controller.create);
+router.get("/getAllBooks", controller.getAll);
+router.post("/storeBook", controller.storeBook);
 
 module.exports = router;

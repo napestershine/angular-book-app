@@ -2,3 +2,5 @@
 */node_modules
 */.vscode
 */.vscode
+*.angular
+*.DS_Store*
