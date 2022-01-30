@@ -8,5 +8,6 @@ const router = express.Router();
 // step 3: configure path
 router.get("/getAllBooks", controller.getAll);
 router.post("/storeBook", controller.storeBook);
+router.post("/updateBook", controller.updateBook);
 
 module.exports = router;

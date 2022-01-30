@@ -14,3 +14,10 @@ exports.storeBook = (req, res) => {
   repo.storeBook(book);
   res.send(book);
 };
+
+exports.updateBook = (req, res) => {
+  console.log("Update a book.");
+  let book = req.body;
+  repo.updateBook(book);
+  res.send(book);
+};

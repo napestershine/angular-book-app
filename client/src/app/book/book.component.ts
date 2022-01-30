@@ -36,7 +36,9 @@ export class BookComponent implements OnInit {
     this.bookService.storeBookDetails(book).subscribe(
       (result) => console.log(result),
       (error) => console.log(error),
-      () => console.log('done')
+      () => {
+        this.getAllBooksDetails();
+      }
     );
   }
 }

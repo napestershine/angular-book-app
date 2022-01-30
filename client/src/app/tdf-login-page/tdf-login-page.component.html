@@ -1,0 +1,12 @@
+<div>
+  <h2>Login with TDF</h2>
+  <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+    <label for="username">Username</label>&nbsp;
+    <input type="text" id="username" name="user" ngModel /><br /><br />
+    <label for="password">Password</label>&nbsp;
+    <input type="password" name="password" id="password" ngModel /><br /><br />
+    <input type="submit" value="submit" />&nbsp;&nbsp;
+    <input type="reset" value="reset" />
+  </form>
+  <span style="color: red">{{ msg }}</span>
+</div>

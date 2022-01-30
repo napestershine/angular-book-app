@@ -1,0 +1,30 @@
+<div>
+  <h2>login form with reactive form</h2>
+
+  <div>
+    <h2>Login with TDF</h2>
+    <form [formGroup]="loginRef">
+      <label for="username">Username</label>&nbsp;
+      <input
+        type="text"
+        id="username"
+        name="user"
+        formControlName="user"
+      /><br /><br />
+      <label for="password">Password</label>&nbsp;
+      <input
+        type="password"
+        name="password"
+        id="password"
+        formControlName="pass"
+      /><br /><br />
+      <input
+        type="button"
+        value="click here"
+        (click)="checkUser()"
+      />&nbsp;&nbsp;
+      <input type="reset" value="reset" />
+    </form>
+    <span style="color: red">{{ msg }}</span>
+  </div>
+</div>
